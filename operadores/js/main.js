@@ -666,11 +666,39 @@
 
 
 
+//import GET DATAS jsons:
 
-// IMPORTADO DE LA FUNCION GET ALL POSTS
+//  GET ALL POSTS
 import { getAllPosts } from "./module/posts.js";
-//IMPORTADO DE LA FUNCION GET ALL ALBUMS
-import { getAllPosts } from "./module/posts.js";
+// GET ALL COMMENTS
+import { getAllComments } from "./module/comments.js";
+// GET ALL ALBUMS
+import { getAllAlbums } from "./module/albums.js";
+// GET ALL PHOTOS
+import { getAllPhotos } from "./module/photos.js";
+// GET ALL TODOS
+import { getAllTodos } from "./module/todos.js";
+// GET ALL USERS
+import { getAllUsers } from "./module/users.js";
 
 
-console.table(await getAllPosts());
+
+//POST
+
+//import POST POSTS
+import { postDataPosts } from "./module/posts.js";
+
+
+
+
+
+
+//ACTIVACION DE FUNCIONES:
+// FUNCIONES GET DATA:
+    console.table(await getAllPosts());  
+
+
+// FUNCIONES POST DATA:
+    const newpost={title:'foo',body:'bar',userId:1,};
+    //APLICAMOS FORMULA DE LA DOCUMENTACION
+    postDataPosts(newpost).then(data=>console.log(data)).catch(error=>console.error('Error:',error));

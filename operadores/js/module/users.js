@@ -1,3 +1,18 @@
+// GET ALL DATA USERS
+export const getAllUsers=async ()=>{
+    let response=await fetch('https://jsonplaceholder.typicode.com/users');
+    let data=await response.json();
+    return data;
+};
+
+
+
+
+
+
+
+
+
 const validateGetUser=async({userId})=>{
     if(typeof userId !=="number"||userId===undefined)return{status:406,message:""}
 }
