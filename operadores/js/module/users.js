@@ -9,4 +9,18 @@ export const getUser=async(arg)=>{
     let data=await res.json();
     return data;
 }
- 
+
+
+export const addAlbum=async(arg)=>{
+    let val=await validateAddAlbum(arg);    
+    if(val) return val;
+    let config  ={
+        method:"POST",
+        headers:{'Content-Type':"application/json"},
+        body: JSON.stringify(arg)
+    }
+    let res = await fetch('https://jsonplaceholder.typicode.com/albums', config);
+    let data=await res.json();
+    return data;
+}
+

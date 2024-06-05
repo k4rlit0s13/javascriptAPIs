@@ -1,4 +1,6 @@
 import{getUser} from "./users.js";
+
+
 export const getAllAlbums=async()=>{
     let res=await fetch('https://jsonplaceholder.typicode.com/albums')
     let data=await res.json();

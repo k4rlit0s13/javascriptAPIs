@@ -646,10 +646,31 @@
 
 
 
-import { addAlbum, getAllAlbums } from "./module/albums.js";
 
-console.table(await addAlbum({userId:1,title:"ajksfj"}));
+
+
+
+
+
+
+//APIS
+
+// import { addAlbum } from "./module/albums.js";
 // console.table(await addAlbum({userId:10,title:"ajksfj"}));
-// console.table(await getAllAlbums(userId,title));
 
 
+// import { addPost } from "./module/posts.js";
+// console.table(await addPost({userId:10,title:"ajksfj"}));
+
+
+
+
+
+
+// IMPORTADO DE LA FUNCION GET ALL POSTS
+import { getAllPosts } from "./module/posts.js";
+//IMPORTADO DE LA FUNCION GET ALL ALBUMS
+import { getAllPosts } from "./module/posts.js";
+
+
+console.table(await getAllPosts());
