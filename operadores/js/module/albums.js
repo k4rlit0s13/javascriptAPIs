@@ -1,6 +1,5 @@
 import{getUser} from "./users.js";
 
-
 // GET ALL DATA ALBUMS
 export const getAllAlbums=async ()=>{
     let response=await fetch('https://jsonplaceholder.typicode.com/albums');
@@ -8,23 +7,17 @@ export const getAllAlbums=async ()=>{
     return data;
 };
 
-export const validateAddAlbum=async({userId,title})=>{
-    if (typeof userId!=="number"||userId===undefined) return {status:406,message:`The data ${userId}, received doesn't comply with the data type`};
-    if (typeof title!=="string"||title===undefined) return {status:406,message:`The data ${title}, received doesn't comply with the data type`};
-    let user=await getUser({userId});
-    if(user.status===204) return {status:200,message:`The user to search does not exist`}
-}
-
-export const addAlbum=async(arg)=>{
-    let val=await validateAddAlbum(arg);    
-    if(val) return val;
-    let config  ={
-        method:"POST",
-        headers:{'Content-Type':"application/json"},
-        body: JSON.stringify(arg)
-    }
-    let res = await fetch('https://jsonplaceholder.typicode.com/albums', config);
-    let data=await res.json();
-    return data;
-}
-
+//POST DATA POSTS
+export const albumDataPosts = async (albumData) => {
+    // Validación de los datos ingresados
+    if(
+        !albumData
+        ||typeof albumData.title!=='string'||albumData.title===undefined
+        ||typeof albumData.userId!=='number'||albumData.userId===undefined
+    )//mensaje de error en caso de no cumplirse la condicion anterior
+    {throw new Error('Datos inválidos: asegúrate de que todos los campos sean correctos.');}
+      const response = await fetch('https://jsonplaceholder.typicode.com/albums',{method: 'POST',body: JSON.stringify(albumData),headers:{'Content-type': 'application/json; charset=UTF-8',},});  
+      //la data      
+      const data = await response.json();
+      return data;
+    };

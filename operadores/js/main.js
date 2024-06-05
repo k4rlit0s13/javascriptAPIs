@@ -665,8 +665,9 @@
 
 
 
+//====================================================================================================//
 
-//import GET DATAS jsons:
+//import formulas GET DATAS:
 
 //  GET ALL POSTS
 import { getAllPosts } from "./module/posts.js";
@@ -683,22 +684,52 @@ import { getAllUsers } from "./module/users.js";
 
 
 
-//POST
+//import formulas POST
 
-//import POST POSTS
+//import posts POSTS
 import { postDataPosts } from "./module/posts.js";
+//import comment POSTS
+import { commentDataPosts } from "./module/comments.js";
+//import albums POSTS
+import { albumDataPosts } from "./module/albums.js";
+//import photos POSTS
+import { photosDataPosts } from "./module/photos.js";
+//import todos POSTS
+import { todosDataPosts } from "./module/todos.js";
+//import users POSTS
+import { usersDataPosts } from "./module/users.js";
 
-
-
-
-
+//_____________________________________________________________________________________________________________________________________________________________________//
 
 //ACTIVACION DE FUNCIONES:
+
 // FUNCIONES GET DATA:
     console.table(await getAllPosts());  
+    // console.table(await getAllComments());  
+    // console.table(await getAllAlbums());  
+    // console.table(await getAllPhotos());  
+    // console.table(await getAllTodos());  
+    // console.table(await getAllUsers());  
 
 
 // FUNCIONES POST DATA:
-    const newpost={title:'foo',body:'bar',userId:1,};
-    //APLICAMOS FORMULA DE LA DOCUMENTACION
-    postDataPosts(newpost).then(data=>console.log(data)).catch(error=>console.error('Error:',error));
+//POSTS
+const newpost={title:'El principito',body:'wasaaaa',userId:1};
+    postDataPosts(newpost).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+//COMMENTS
+const newcomment={email:'calos3@gmail.com',name:'calos',body:'bar',postId:1};
+    commentDataPosts(newcomment).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+//ALBUMS
+const newAlbum={title:'El cacique de la junta',userId:1};
+    albumDataPosts(newAlbum).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+//PHOTOS
+const newphoto={thumbnailUrl:'http nose',url:'httpsdadafha',title:'la monda 😈',albumId:1};
+    photosDataPosts(newphoto).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+//TODOS
+const newTodos={completed:true,title:'la monda 😈',userId:1};
+    todosDataPosts(newTodos).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+//USERS
+const newUser={name:"Leanne Graham",username:"Bret",email:"Sincere@april.biz",address:{street:"Kulas Light",suite:"Apt. 556",city:"Gwenborough",zipcode:"92998-3874",geo:{lat:"-37.3159",lng:"81.1496"}},phone:"1-770-736-8031 x56442",website:"hildegard.org",company:{name:"Romaguera-Crona",catchPhrase:"Multi-layered client-server neural-net",bs:"harness real-time e-markets"}};
+    usersDataPosts(newUser).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//=================================================================================================================================================================//
