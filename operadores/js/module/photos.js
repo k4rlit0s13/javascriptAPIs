@@ -51,3 +51,17 @@ export const putDataPhotos=async(selectDataPhotos)=>{
         const result=await put.json();
         console.log(`Se actualizo el dato id:${selectDataPhotos.id} en PHOTOS 😎`, result);
         };
+
+//DELETE DATA COMMENTS
+export const deleteDataPhotos=async(photosToDelete)=>{
+    if(typeof photosToDelete!=='number'||photosToDelete===undefined)
+        {throw new Error('ID inválido: asegúrate de que el ID sea un número 👁👅👁.');}
+        
+    const response=await fetch(`https://jsonplaceholder.typicode.com/comments/${photosToDelete}`);
+        if (!response.ok) {throw new Error('406 dato no existente 👁👄👁');}
+// Realizar el DELETE
+    const del=await fetch(`https://jsonplaceholder.typicode.com/comments/${photosToDelete}`,{method: 'DELETE'});
+// Verificación del DELETE
+    if (!del.ok){throw new Error('ERROR, VUELVE A INTENTARLO ☠');}
+        console.log(`Se eliminó el dato id:${photosToDelete} en PHOTOS 😎`);
+};

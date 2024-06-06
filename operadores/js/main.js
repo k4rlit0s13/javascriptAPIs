@@ -746,6 +746,29 @@ import { putDataTodos } from "./module/todos.js";
 //import put USERS
 import { putDataUsers } from "./module/users.js";
 
+//======================================================================================================//
+
+//import formulas DELETE
+
+//======================================================================================================//
+
+//import delete POSTS
+import { deleteDataPosts } from "./module/posts.js";
+
+//import delete COMMENTS
+import { deleteDataComment } from "./module/comments.js";
+
+//import delete ALBUMS
+import { deleteDataAlbums } from "./module/albums.js";
+
+//import delete PHOTOS
+import { deleteDataPhotos } from "./module/photos.js";
+
+//import delete TODOS
+import { deleteDataTodos } from "./module/todos.js";
+
+//import delete USERS
+import { deleteDataUsers } from "./module/users.js";
 
 //======================================================================================================//
 
@@ -823,27 +846,56 @@ import { putDataUsers } from "./module/users.js";
 
 //=================================================================================================================================================================//
 
-//POSTS
-const selectDataPost={id:1,userId:2,title:"el valenciaja",body:"que lo que"};
-    putDataPosts(selectDataPost).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// //POSTS
+// const selectDataPost={id:1,userId:2,title:"el valenciaja",body:"que lo que"};
+//     putDataPosts(selectDataPost).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
-//COMMENTS 
-const selectDataComment={id:5,postId:1,name:"Como tu te llama io no c 😭",email:"Guayascript12@gmail.com",body:"como que tu diceeeee 😼"};
-putDataComment(selectDataComment).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// //COMMENTS 
+// const selectDataComment={id:5,postId:1,name:"Como tu te llama io no c 😭",email:"Guayascript12@gmail.com",body:"como que tu diceeeee 😼"};
+// putDataComment(selectDataComment).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+// //ALBUMS
+// const selectDataAlbums={id:2,userId:1,title:"LA BUENA 😼"};
+// putDataAlbums(selectDataAlbums).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+// //PHOTOS
+// const selectDataPhotos={id:50,albumId:1,title:"COMO ESTAN MUCHACHOS",url:"comotanmuchachos.com",thumbnailUrl:"noc,comotanmuchachosXD"};
+// putDataPhotos(selectDataPhotos).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+// //TODOS
+// const selectDataTodos={id:1,userId:1,title:"QUIUBO",completed:true};
+// putDataTodos(selectDataTodos).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+// //USERS
+// const selectDataUsers={id:2,name:"Lebron James",username:"Libra",email:"libronjames@gamil.com",address:{street:"Kulas Light",suite:"Apt. 465",city:"wiwiwii",zipcode:"98415-65423",geo:{lat:"-65165165",lng:"81.1496"}},phone:"1-2-496687564-498",website:"libraypapa.com",company:{name:"libros James",catchPhrase:"Multi-layered client-server neural-net",bs:"harness real-time e-markets"}};
+// putDataUsers(selectDataUsers).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//=================================================================================================================================================================//
+
+//FUNCIONES DELETE DATA
+
+//=================================================================================================================================================================//
+
+//POSTS
+const postsToDelete=1;
+deleteDataPosts(postsToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
+
+//COMMENTS
+const commentToDelete=2;
+deleteDataComment(commentToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
 
 //ALBUMS
-const selectDataAlbums={id:2,userId:1,title:"LA BUENA 😼"};
-putDataAlbums(selectDataAlbums).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+const albumToDelete=3;
+deleteDataAlbums(albumToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
 
 //PHOTOS
-const selectDataPhotos={id:50,albumId:1,title:"COMO ESTAN MUCHACHOS",url:"comotanmuchachos.com",thumbnailUrl:"noc,comotanmuchachosXD"};
-putDataPhotos(selectDataPhotos).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+const photosToDelete=4;
+deleteDataPhotos(photosToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
 
 //TODOS
-const selectDataTodos={id:1,userId:1,title:"QUIUBO",completed:true};
-putDataTodos(selectDataTodos).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+const todosToDelete=5;
+deleteDataTodos(todosToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
 
 //USERS
-const selectDataUsers={id:2,name:"Lebron James",username:"Libra",email:"libronjames@gamil.com",address:{street:"Kulas Light",suite:"Apt. 465",city:"wiwiwii",zipcode:"98415-65423",geo:{lat:"-65165165",lng:"81.1496"}},phone:"1-2-496687564-498",website:"libraypapa.com",company:{name:"libros James",catchPhrase:"Multi-layered client-server neural-net",bs:"harness real-time e-markets"}};
-putDataUsers(selectDataUsers).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
-
+const usersToDelete=6;
+deleteDataUsers(usersToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
