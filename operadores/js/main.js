@@ -663,11 +663,13 @@
 // console.table(await addPost({userId:10,title:"ajksfj"}));
 
 
-
+//            EJERCICIOS APIS JAVASCRIPT
 
 //====================================================================================================//
 
 //import formulas GET DATAS:
+
+//======================================================================================================//
 
 //  GET ALL POSTS
 import { getAllPosts } from "./module/posts.js";
@@ -686,6 +688,8 @@ import { getAllUsers } from "./module/users.js";
 
 //import formulas GET ONE DATA:
 
+//======================================================================================================//
+
 //  GET ONE POSTS
 import { getOnePosts } from "./module/posts.js";
 //  GET ONE COMMENTS
@@ -703,6 +707,8 @@ import { getOneUser } from "./module/users.js";
 
 //import formulas POST
 
+//======================================================================================================//
+
 //import posts POSTS
 import { postDataPosts } from "./module/posts.js";
 //  GET ONE COMMENTS
@@ -718,7 +724,34 @@ import { usersDataPosts } from "./module/users.js";
 
 //======================================================================================================//
 
+//import formulas PUT
+
+//======================================================================================================//
+
+//import put POSTS
+import { putDataPosts } from "./module/posts.js";
+
+//import put COMMENTS
+import { putDataComment } from "./module/comments.js";
+
+//import put ALBUMS
+import { putDataAlbums } from "./module/albums.js";
+
+//import put PHOTOS
+import { putDataPhotos } from "./module/photos.js";
+
+//import put TODOS
+import { putDataTodos } from "./module/todos.js";
+
+//import put USERS
+import { putDataUsers } from "./module/users.js";
+
+
+//======================================================================================================//
+
 //ACTIVACION DE FUNCIONES:
+
+//======================================================================================================//
 
 // FUNCIONES GET DATA ALL:
     // console.table(await getAllPosts());  
@@ -729,49 +762,88 @@ import { usersDataPosts } from "./module/users.js";
     // console.table(await getAllUsers());  
 
 //======================================================================================================//
+
 // FUNCIONES GET ONE DATA:
 
-//  GET ONE POSTS
-const idPost=11;
-    getOnePosts(idPost).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+//======================================================================================================//
 
-//GET ONE DATA COMMENTS
-const idComment=5;
-    getOneComment(idComment).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// //  GET ONE POSTS
+// const idPost=11;
+//     getOnePosts(idPost).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
-//GET ONE DATA ALBUMS
-const idAlbums=7;
-    getOneAlbum(idAlbums).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// //GET ONE DATA COMMENTS
+// const idComment=5;
+//     getOneComment(idComment).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
-//GET ONE DATA TODOS
-const idTodos=9;
-    getOnePhoto(idTodos).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// //GET ONE DATA ALBUMS
+// const idAlbums=7;
+//     getOneAlbum(idAlbums).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
-//GET ONE DATA USER
-const idUser=9;
-    getOneUser(idUser).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// //GET ONE DATA TODOS
+// const idTodos=9;
+//     getOnePhoto(idTodos).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+// //GET ONE DATA USER
+// const idUser=9;
+//     getOneUser(idUser).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
 
 //======================================================================================================//
 
 // FUNCIONES POST DATA:
-//POSTS
-const newpost={title:'El principito',body:'wasaaaa',userId:1};
-    postDataPosts(newpost).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
-//COMMENTS
-const newcomment={email:'calos3@gmail.com',name:'calos',body:'bar',postId:1};
-    commentDataPosts(newcomment).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
-//ALBUMS
-const newAlbum={title:'El bogotaso',userId:1};
-    albumDataPosts(newAlbum).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
-//PHOTOS
-const newphoto={thumbnailUrl:'http nose',url:'httpsdadafha',title:'Diomeedias 😈',albumId:1};
-    photosDataPosts(newphoto).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
-//TODOS
-const newTodos={completed:true,title:'la monda 😈',userId:1};
-    todosDataPosts(newTodos).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
-//USERS
-const newUser={name:"Leanne Graham",username:"Bret",email:"Sincere@april.biz",address:{street:"Kulas Light",suite:"Apt. 556",city:"Gwenborough",zipcode:"92998-3874",geo:{lat:"-37.3159",lng:"81.1496"}},phone:"1-770-736-8031 x56442",website:"hildegard.org",company:{name:"Romaguera-Crona",catchPhrase:"Multi-layered client-server neural-net",bs:"harness real-time e-markets"}};
-    usersDataPosts(newUser).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//======================================================================================================//
+// //POSTS
+// const newpost={title:'El principito',body:'wasaaaa',userId:1};
+//     postDataPosts(newpost).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+// //COMMENTS
+// const newcomment={email:'calos3@gmail.com',name:'calos',body:'bar',postId:1};
+//     commentDataPosts(newcomment).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+// //ALBUMS
+// const newAlbum={title:'El bogotaso',userId:1};
+//     albumDataPosts(newAlbum).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+// //PHOTOS
+// const newphoto={thumbnailUrl:'http nose',url:'httpsdadafha',title:'Diomeedias 😈',albumId:1};
+//     photosDataPosts(newphoto).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+// //TODOS
+// const newTodos={completed:true,title:'la monda 😈',userId:1};
+//     todosDataPosts(newTodos).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+// //USERS
+// const newUser={name:"Leanne Graham",username:"Bret",email:"Sincere@april.biz",address:{street:"Kulas Light",suite:"Apt. 556",city:"Gwenborough",zipcode:"92998-3874",geo:{lat:"-37.3159",lng:"81.1496"}},phone:"1-770-736-8031 x56442",website:"hildegard.org",company:{name:"Romaguera-Crona",catchPhrase:"Multi-layered client-server neural-net",bs:"harness real-time e-markets"}};
+//     usersDataPosts(newUser).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
 //=================================================================================================================================================================//
+
+//FUNCIONES PUT DATA
+
+//=================================================================================================================================================================//
+
+//POSTS
+const selectDataPost={id:1,userId:2,title:"el valenciaja",body:"que lo que"};
+    putDataPosts(selectDataPost).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//COMMENTS 
+const selectDataComment={id:5,postId:1,name:"Como tu te llama io no c 😭",email:"Guayascript12@gmail.com",body:"como que tu diceeeee 😼"};
+putDataComment(selectDataComment).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//ALBUMS
+const selectDataAlbums={id:2,userId:1,title:"LA BUENA 😼"};
+putDataAlbums(selectDataAlbums).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//PHOTOS
+const selectDataPhotos={id:50,albumId:1,title:"COMO ESTAN MUCHACHOS",url:"comotanmuchachos.com",thumbnailUrl:"noc,comotanmuchachosXD"};
+putDataPhotos(selectDataPhotos).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//TODOS
+const selectDataTodos={id:1,userId:1,title:"QUIUBO",completed:true};
+putDataTodos(selectDataTodos).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//USERS
+const selectDataUsers={id:2,name:"Lebron James",username:"Libra",email:"libronjames@gamil.com",address:{street:"Kulas Light",suite:"Apt. 465",city:"wiwiwii",zipcode:"98415-65423",geo:{lat:"-65165165",lng:"81.1496"}},phone:"1-2-496687564-498",website:"libraypapa.com",company:{name:"libros James",catchPhrase:"Multi-layered client-server neural-net",bs:"harness real-time e-markets"}};
+putDataUsers(selectDataUsers).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+

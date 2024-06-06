@@ -31,3 +31,23 @@ export const postDataPosts = async (postData) => {
       return data;
     };
 
+
+//PUT DATA POSTS
+export const putDataPosts=async(selectDataPost)=>{
+    // Validación de los datos ingresados
+    if( !selectDataPost
+        ||typeof selectDataPost.id!=='number'||selectDataPost.id===undefined
+        ||typeof selectDataPost.userId!=='number'||selectDataPost.userId===undefined
+        ||typeof selectDataPost.title!=='string'||selectDataPost.title===undefined
+        ||typeof selectDataPost.body!=='string'||selectDataPost.body===undefined
+        ){throw new Error('Datos inválidos: asegúrate de que todos los campos sean correctos.');}
+    //verificacion del dato existente
+    const response=await fetch(`https://jsonplaceholder.typicode.com/posts/${selectDataPost.id}`);
+        if(!response.ok){throw new Error('406 dato no existente 😯');}
+    //realizar el put
+    const put=await fetch(`https://jsonplaceholder.typicode.com/posts/${selectDataPost.id}`,{method:'PUT',body:JSON.stringify(selectDataPost), headers:{'Content-Type':'application/json;charset=UTF-8'}}); 
+    //verificacion del put
+    if(!put.ok){throw new Error('ERROR, VUELVE A INTENTARLO ☠');}
+        const result=await put.json();
+        console.log(`Se actualizo el dato id:${selectDataPost.id} en POSTS 😎`, result);
+        };

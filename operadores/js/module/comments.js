@@ -16,7 +16,6 @@ export const getOneComment = async (id) => {
 };
 
 
-
 //POST DATA COMMENTS
 export const commentDataPosts = async (commentData) => {
     // Validación de los datos ingresados
@@ -33,3 +32,26 @@ export const commentDataPosts = async (commentData) => {
       const data = await response.json();
       return data;
     }; 
+
+
+//PUT DATA COMMENT
+export const putDataComment=async(selectDataComment)=>{
+    // Validación de los datos ingresados
+    if( !selectDataComment
+        ||typeof selectDataComment.id!=='number'||selectDataComment.id===undefined
+        ||typeof selectDataComment.postId!=='number'||selectDataComment.postId===undefined
+        ||typeof selectDataComment.name!=='string'||selectDataComment.name===undefined
+        ||typeof selectDataComment.email!=='string'||selectDataComment.email===undefined
+        ||typeof selectDataComment.body!=='string'||selectDataComment.body===undefined
+        ){throw new Error('Datos inválidos: asegúrate de que todos los campos sean correctos.');}
+    //verificacion del dato existente
+    const response=await fetch(`https://jsonplaceholder.typicode.com/posts/${selectDataComment.id}`);
+        if(!response.ok){throw new Error('406 dato no existente 😯');}
+    //realizar el put
+    const put=await fetch(`https://jsonplaceholder.typicode.com/posts/${selectDataComment.id}`,{method:'PUT',body:JSON.stringify(selectDataComment), headers:{'Content-Type':'application/json;charset=UTF-8'}}); 
+    //verificacion del put
+    if(!put.ok){throw new Error('ERROR, VUELVE A INTENTARLO ☠');}
+        const result=await put.json();
+        console.log(`Se actualizo el dato id:${selectDataComment.id} en COMMENTS 😎`, result);
+        };
+

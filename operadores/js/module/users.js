@@ -53,3 +53,44 @@ export const usersDataPosts = async (usersData) => {
       const data = await response.json();
       return data;
     };
+
+//PUT DATA USERS
+export const putDataUsers=async(selectDataUsers)=>{
+    // Validación de los datos ingresados
+    if( 
+        !selectDataUsers ||
+        typeof selectDataUsers.name !== "string" || selectDataUsers.name === undefined ||
+        typeof selectDataUsers.username !== 'string' || selectDataUsers.username === undefined ||
+        typeof selectDataUsers.email !== 'string' || selectDataUsers.email === undefined ||
+        
+        // Validación de la dirección
+        !selectDataUsers.address || typeof selectDataUsers.address !== 'object' ||
+        typeof selectDataUsers.address.street !== 'string' || selectDataUsers.address.street === undefined ||
+        typeof selectDataUsers.address.suite !== 'string' || selectDataUsers.address.suite === undefined ||
+        typeof selectDataUsers.address.city !== 'string' || selectDataUsers.address.city === undefined ||
+        typeof selectDataUsers.address.zipcode !== 'string' || selectDataUsers.address.zipcode === undefined ||
+         // Validación de geo
+        !selectDataUsers.address.geo || typeof selectDataUsers.address.geo !== 'object' ||
+        typeof selectDataUsers.address.geo.lat !== 'string' || selectDataUsers.address.geo.lat === undefined ||
+        typeof selectDataUsers.address.geo.lng !== 'string' || selectDataUsers.address.geo.lng === undefined ||
+
+        typeof selectDataUsers.phone !== 'string' || selectDataUsers.phone === undefined ||
+        typeof selectDataUsers.website !== 'string' || selectDataUsers.website === undefined ||
+
+        // Validación de la compañía
+        !selectDataUsers.company || typeof selectDataUsers.company !== 'object' ||
+        typeof selectDataUsers.company.name !== 'string' || selectDataUsers.company.name === undefined ||
+        typeof selectDataUsers.company.catchPhrase !== 'string' || selectDataUsers.company.catchPhrase === undefined ||
+        typeof selectDataUsers.company.bs !== 'string' || selectDataUsers.company.bs === undefined
+
+        ){throw new Error('Datos inválidos: asegúrate de que todos los campos sean correctos.');}
+    //verificacion del dato existente
+    const response=await fetch(`https://jsonplaceholder.typicode.com/posts/${selectDataUsers.id}`);
+        if(!response.ok){throw new Error('406 dato no existente 😯');}
+    //realizar el put
+    const put=await fetch(`https://jsonplaceholder.typicode.com/posts/${selectDataUsers.id}`,{method:'PUT',body:JSON.stringify(selectDataUsers), headers:{'Content-Type':'application/json;charset=UTF-8'}}); 
+    //verificacion del put
+    if(!put.ok){throw new Error('ERROR, VUELVE A INTENTARLO ☠');}
+        const result=await put.json();
+        console.log(`Se actualizo el dato id:${selectDataUsers.id} en USERS 😎`, result);
+        };

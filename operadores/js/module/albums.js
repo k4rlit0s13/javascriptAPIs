@@ -28,3 +28,22 @@ export const albumDataPosts = async (albumData) => {
       const data = await response.json();
       return data;
     };
+
+//PUT DATA ALBUMS
+export const putDataAlbums=async(selectDataAlbums)=>{
+    // Validación de los datos ingresados
+    if( !selectDataAlbums
+        ||typeof selectDataAlbums.id!=='number'||selectDataAlbums.id===undefined
+        ||typeof selectDataAlbums.userId!=='number'||selectDataAlbums.userId===undefined
+        ||typeof selectDataAlbums.title!=='string'||selectDataAlbums.title===undefined
+        ){throw new Error('Datos inválidos: asegúrate de que todos los campos sean correctos.');}
+    //verificacion del dato existente
+    const response=await fetch(`https://jsonplaceholder.typicode.com/posts/${selectDataAlbums.id}`);
+        if(!response.ok){throw new Error('406 dato no existente 😯');}
+    //realizar el put
+    const put=await fetch(`https://jsonplaceholder.typicode.com/posts/${selectDataAlbums.id}`,{method:'PUT',body:JSON.stringify(selectDataAlbums), headers:{'Content-Type':'application/json;charset=UTF-8'}}); 
+    //verificacion del put
+    if(!put.ok){throw new Error('ERROR, VUELVE A INTENTARLO ☠');}
+        const result=await put.json();
+        console.log(`Se actualizo el dato id:${selectDataAlbums.id} en ALBUMS 😎`, result);
+        };
