@@ -5,6 +5,15 @@ export const getAllTodos=async ()=>{
     return data;
 };
 
+//GET ONE DATA PHOTOS
+export const getOneTodos = async (id) => {
+    if (!id||typeof id!=="number"||typeof id===undefined){throw new Error('Dato erroneo, no es el formato correcto');}
+    let response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
+    if (response.status===404){throw new Error(`The data ${id} doesn't exists`);}
+    let data = await response.json();
+    return data;
+};
+
 //POST DATA TODOS
 export const todosDataPosts = async (todosData) => {
     // Validación de los datos ingresados

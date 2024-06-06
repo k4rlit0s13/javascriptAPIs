@@ -1,9 +1,16 @@
-import{getUser} from "./users.js";
-
 // GET ALL DATA ALBUMS
 export const getAllAlbums=async ()=>{
     let response=await fetch('https://jsonplaceholder.typicode.com/albums');
     let data=await response.json();
+    return data;
+};
+
+//GET ONE DATA ALBUMS
+export const getOneAlbum = async (id) => {
+    if (!id||typeof id!=="number"||typeof id===undefined){throw new Error('Dato erroneo, no es el formato correcto');}
+    let response = await fetch(`https://jsonplaceholder.typicode.com/albums/${id}`);
+    if (response.status===404){throw new Error(`The data ${id} doesn't exists`);}
+    let data = await response.json();
     return data;
 };
 

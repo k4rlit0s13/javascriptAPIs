@@ -682,13 +682,30 @@ import { getAllTodos } from "./module/todos.js";
 // GET ALL USERS
 import { getAllUsers } from "./module/users.js";
 
+//======================================================================================================//
 
+//import formulas GET ONE DATA:
+
+//  GET ONE POSTS
+import { getOnePosts } from "./module/posts.js";
+//  GET ONE COMMENTS
+import { getOneComment } from "./module/comments.js";
+//  GET ONE ALBUMS
+import { getOneAlbum } from "./module/albums.js";
+//  GET ONE PHOTOS
+import { getOnePhoto } from "./module/photos.js";
+//  GET ONE TODOS
+import { getOneTodos } from "./module/todos.js";
+//  GET ONE USERS
+import { getOneUser } from "./module/users.js";
+
+//======================================================================================================//
 
 //import formulas POST
 
 //import posts POSTS
 import { postDataPosts } from "./module/posts.js";
-//import comment POSTS
+//  GET ONE COMMENTS
 import { commentDataPosts } from "./module/comments.js";
 //import albums POSTS
 import { albumDataPosts } from "./module/albums.js";
@@ -699,18 +716,43 @@ import { todosDataPosts } from "./module/todos.js";
 //import users POSTS
 import { usersDataPosts } from "./module/users.js";
 
-//_____________________________________________________________________________________________________________________________________________________________________//
+//======================================================================================================//
 
 //ACTIVACION DE FUNCIONES:
 
-// FUNCIONES GET DATA:
-    console.table(await getAllPosts());  
+// FUNCIONES GET DATA ALL:
+    // console.table(await getAllPosts());  
     // console.table(await getAllComments());  
     // console.table(await getAllAlbums());  
     // console.table(await getAllPhotos());  
     // console.table(await getAllTodos());  
     // console.table(await getAllUsers());  
 
+//======================================================================================================//
+// FUNCIONES GET ONE DATA:
+
+//  GET ONE POSTS
+const idPost=11;
+    getOnePosts(idPost).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//GET ONE DATA COMMENTS
+const idComment=5;
+    getOneComment(idComment).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//GET ONE DATA ALBUMS
+const idAlbums=7;
+    getOneAlbum(idAlbums).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//GET ONE DATA TODOS
+const idTodos=9;
+    getOnePhoto(idTodos).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//GET ONE DATA USER
+const idUser=9;
+    getOneUser(idUser).then(data=>console.table(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+
+//======================================================================================================//
 
 // FUNCIONES POST DATA:
 //POSTS
@@ -720,10 +762,10 @@ const newpost={title:'El principito',body:'wasaaaa',userId:1};
 const newcomment={email:'calos3@gmail.com',name:'calos',body:'bar',postId:1};
     commentDataPosts(newcomment).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 //ALBUMS
-const newAlbum={title:'El cacique de la junta',userId:1};
+const newAlbum={title:'El bogotaso',userId:1};
     albumDataPosts(newAlbum).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 //PHOTOS
-const newphoto={thumbnailUrl:'http nose',url:'httpsdadafha',title:'la monda 😈',albumId:1};
+const newphoto={thumbnailUrl:'http nose',url:'httpsdadafha',title:'Diomeedias 😈',albumId:1};
     photosDataPosts(newphoto).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 //TODOS
 const newTodos={completed:true,title:'la monda 😈',userId:1};
