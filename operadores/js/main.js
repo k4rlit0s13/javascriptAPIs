@@ -840,6 +840,31 @@ import { deleteDataUsers } from "./module/users.js";
 // const newUser={name:"Leanne Graham",username:"Bret",email:"Sincere@april.biz",address:{street:"Kulas Light",suite:"Apt. 556",city:"Gwenborough",zipcode:"92998-3874",geo:{lat:"-37.3159",lng:"81.1496"}},phone:"1-770-736-8031 x56442",website:"hildegard.org",company:{name:"Romaguera-Crona",catchPhrase:"Multi-layered client-server neural-net",bs:"harness real-time e-markets"}};
 //     usersDataPosts(newUser).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
+// //USERS prueba server miguel
+// const newUser = {
+//     name: "A las 3 se va pal' beauty, a las 4 va pal' mall Pa' eso de las 5 está a vapor Se hizo las boobies y el booty, viste de christian dior Activa a toas' sus amigas con un call",
+//     username: "La bebecita bebe lean y bebe whisky Fuma marihuana y también se mete picky Senda bellacona, frikitona, friky friky Es media salvaje, ella es adicta a mi dicky",
+//     email: "Le mete al lean y le mete al whisky Fuma marihuana y también se mete picky Senda bellacona, frikitona, friky friky En la cama una salvaje y la castigo con mi dicky",
+//     address: {
+//       street: "Baby toma, dos chollys, en un vaso de lean Dando más vueltas que un patín, en la cama ella tiene el swing Con el pelo sayayin En el lexus dando vueltas con mi queen No la mires, evitate el motín",
+//       suite: "Whisky, toma, toma, va quedar en coma Ojos chiquititos, falta que hable en otro idioma Con sus posiciones parece de goma A mi me encanta cuando llama, para que llegue y me la coma",
+//       city: "Le mete al lean y le mete al whisky Fuma fumarihuana y también se mete picky Senda bellacona, frikitona, friky friky En la cama una salvaje y la castigo con mi dicky",
+//       zipcode: "La bebecita bebe lean y bebe whisky Fuma marihuana y también se mete picky Senda bellacona, frikitona, friky friky Es media salvaje, ella es adicta a mi dicky",
+//       geo: {
+//         lat: "Ella es una bellaca, chingamos en la sala y en la hamaca Recostados de la butaca, encima de todas las pacas 5: 12 para el sistema y media flaca y te meto toda la noche Ponte en 4 mami pero en tacas De giuseppe, yo soy el que le reparte a todos el pety Y me roncan de mujeres y andan con betty spaghetti Me recuerdo aquel día en que yo te metí Apuntamos el blanco, en tu culo te puse una equis",
+//         lng: "La bebecita bebe lean y bebe whisky Fuma marihuana y también se mete picky Senda bellacona, frikitona, friky friky Es media salvaje, ella es adicta a mi dicky"
+//       }
+//     },
+//     phone: "Le mete al lean y le mete al whisky Fuma fumarihuana y también se mete picky Senda bellacona, frikitona, friky frikyEn la cama una salvaje y la castigo con mi dicky",
+//     website: "Yo no me meto palys, porque siempre borro cinta Me ves en la disco, tú te pegas y te afincas Te trincas y brincas, brincoteando tú te desenvuelves Y te envuelves rápido, que la redonda se disuelve en tu sistema",
+//     company: {
+//       name: "El opio baja por lo digestivo pal hígado es el castigo El efecto secundario es efectivo Masivo, yo nunca me fatigo Cabeza grande para tu toto, es algo destructivo",
+//       catchPhrase: "La bebecita bebe lean y bebe whisky Fuma marihuana y también se mete picky Senda bellacona, frikitona, frky friky Es media salvaje, ella es adicta a mi dicky",
+//       bs: "Le mete al lean y le mete al whisky Fuma fumarihuana y también se mete picky Senda bellacona, frikitona, friky friky En la cama una salvaje y la castigo con mi dicky"
+//     },
+//   };
+    // usersDataPosts(newUser).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
 //=================================================================================================================================================================//
 
 //FUNCIONES PUT DATA
@@ -870,6 +895,32 @@ import { deleteDataUsers } from "./module/users.js";
 // const selectDataUsers={id:2,name:"Lebron James",username:"Libra",email:"libronjames@gamil.com",address:{street:"Kulas Light",suite:"Apt. 465",city:"wiwiwii",zipcode:"98415-65423",geo:{lat:"-65165165",lng:"81.1496"}},phone:"1-2-496687564-498",website:"libraypapa.com",company:{name:"libros James",catchPhrase:"Multi-layered client-server neural-net",bs:"harness real-time e-markets"}};
 // putDataUsers(selectDataUsers).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
+// //USERS prueba server miguel
+// const selectDataUsers = {
+//     id: "b87f",
+//     name: "Para entender la historia de Five Nights at Freddy's hay que olvidarse que estos son juegos y quiero que tomen realmente a esta saga como lo que es: una historia de terror. Empezamos con William Afton, el hombre detrás de todo. William y Henry Emily abren juntos una pizzería llamada Fredbear's Family Diner. Es aquí donde comienzan los asesinatos, con William como el principal culpable. Con la apertura de Freddy Fazbear's Pizza, los animatrónicos comienzan a tener comportamientos extraños debido a los espíritus de los niños asesinados. Cada juego nos revela más sobre los oscuros secretos de Afton y su obsesión con la inmortalidad. La saga es una compleja mezcla de tragedia, venganza y el oscuro deseo de vivir para siempre",
+//     username: "Lebron James",
+//     email: "libronjames@gmail.com",
+//     address: {
+//       street: "Kulas Light",
+//       suite: "Apt. 465",
+//       city: "wiwiwii",
+//       zipcode: "98415-65423",
+//       geo: {
+//         lat: "-65165165",
+//         lng: "81.1496"
+//       }
+//     },
+//     phone: "1-2-496687564-498",
+//     website: "libraypapa.com",
+//     company: {
+//       name: "libros James",
+//       catchPhrase: "Multi-layered client-server neural-net",
+//       bs: "harness real-time e-markets"
+//     }
+//   };
+//   putDataUsers(selectDataUsers).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
 //=================================================================================================================================================================//
 
 //FUNCIONES DELETE DATA
@@ -877,25 +928,25 @@ import { deleteDataUsers } from "./module/users.js";
 //=================================================================================================================================================================//
 
 //POSTS
-const postsToDelete=1;
-deleteDataPosts(postsToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
+// const postsToDelete=1;
+// deleteDataPosts(postsToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
 
-//COMMENTS
-const commentToDelete=2;
-deleteDataComment(commentToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
+// //COMMENTS
+// const commentToDelete=2;
+// deleteDataComment(commentToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
 
-//ALBUMS
-const albumToDelete=3;
-deleteDataAlbums(albumToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
+// //ALBUMS
+// const albumToDelete=3;
+// deleteDataAlbums(albumToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
 
-//PHOTOS
-const photosToDelete=4;
-deleteDataPhotos(photosToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
+// //PHOTOS
+// const photosToDelete=4;
+// deleteDataPhotos(photosToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
 
-//TODOS
-const todosToDelete=5;
-deleteDataTodos(todosToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
+// //TODOS
+// const todosToDelete=5;
+// deleteDataTodos(todosToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
 
-//USERS
-const usersToDelete=6;
-deleteDataUsers(usersToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
+// //USERS
+// const usersToDelete="";
+// deleteDataUsers(usersToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
