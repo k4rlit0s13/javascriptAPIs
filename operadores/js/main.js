@@ -746,6 +746,50 @@ import { putDataTodos } from "./module/todos.js";
 //import put USERS
 import { putDataUsers } from "./module/users.js";
 
+
+//=================================================================================================================================================================//
+
+//import formulas PATCH 
+
+//=================================================================================================================================================================//
+
+//import put POSTS
+import { patchUserIdPost } from "./module/posts.js";
+import { patchTitlePost } from "./module/posts.js";
+import { patchBodyPost } from "./module/posts.js";
+
+//import put COMMENTS
+import { patchPostIdComment } from "./module/comments.js";
+import { patchNameComment } from "./module/comments.js";
+import { patchEmailComment } from "./module/comments.js";
+import { patchBodyComment } from "./module/comments.js";
+
+//import put ALBUMS
+import { patchUserIdAlbum } from "./module/albums.js";
+import { patchTitleAlbum } from "./module/albums.js";
+
+//import put PHOTOS
+import { patchAlbumIdPhoto } from "./module/photos.js";
+import { patchTitlePhoto } from "./module/photos.js";
+import { patchURLPhoto } from "./module/photos.js";
+import { patchThumbnailUrlPhoto } from "./module/photos.js";
+
+//import put TODOS
+import { patchUserIdTodos } from "./module/todos.js";
+import { patchTitleTodos } from "./module/todos.js";
+import { patchCompletedTodos } from "./module/todos.js";
+
+//import put USERS
+import { patchNameUsers } from "./module/users.js";
+import { patchNameUsername } from "./module/users.js";
+import { patchNameEmail } from "./module/users.js";
+import { patchAddressUsers } from "./module/users.js";
+import { patchPhoneUsers } from "./module/users.js";
+import { patchWebsiteUsers } from "./module/users.js";
+import { patchCompanyUsers } from "./module/users.js";
+
+
+
 //======================================================================================================//
 
 //import formulas DELETE
@@ -817,53 +861,61 @@ import { deleteDataUsers } from "./module/users.js";
 
 //======================================================================================================//
 // //POSTS
-// const newpost={title:'El principito',body:'wasaaaa',userId:1};
-//     postDataPosts(newpost).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// const userId=1;
+// const title='El principito';
+// const body='wasaaaa';
+// postDataPosts(userId,title,body).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
 // //COMMENTS
-// const newcomment={email:'calos3@gmail.com',name:'calos',body:'bar',postId:1};
-//     commentDataPosts(newcomment).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// const postId=1;
+// const name='calos';
+// const email='calos3@gmail.com';
+// const body='barasofhalkgjsjkfggkhpdr';
+// commentDataPosts(postId,name,email,body).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
 // //ALBUMS
-// const newAlbum={title:'El bogotaso',userId:1};
-//     albumDataPosts(newAlbum).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// const userId=3;
+// const title="LA BUENA 😼";
+// albumDataPosts(userId,title).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
 // //PHOTOS
-// const newphoto={thumbnailUrl:'http nose',url:'httpsdadafha',title:'Diomeedias 😈',albumId:1};
-//     photosDataPosts(newphoto).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// const albumId=1;
+// const title="LA BUENA";
+// const URL="LA BUENA URL 😼";
+// const thumbnailUrl="LA BUENA THMBAILURL😼";
+// albumDataPosts(albumId,title,URL,thumbnailUrl).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
 // //TODOS
-// const newTodos={completed:true,title:'la monda 😈',userId:1};
-//     todosDataPosts(newTodos).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// const userId=1;
+// const title='la monda 😈';
+// const completed=true;
+// todosDataPosts(userId,title,completed).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
 // //USERS
-// const newUser={name:"Leanne Graham",username:"Bret",email:"Sincere@april.biz",address:{street:"Kulas Light",suite:"Apt. 556",city:"Gwenborough",zipcode:"92998-3874",geo:{lat:"-37.3159",lng:"81.1496"}},phone:"1-770-736-8031 x56442",website:"hildegard.org",company:{name:"Romaguera-Crona",catchPhrase:"Multi-layered client-server neural-net",bs:"harness real-time e-markets"}};
-//     usersDataPosts(newUser).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// const name="John Doe";
+// const username="johndoe";
+// const email="john.doe@example.com";
 
-// //USERS prueba server miguel
-// const newUser = {
-//     name: "A las 3 se va pal' beauty, a las 4 va pal' mall Pa' eso de las 5 está a vapor Se hizo las boobies y el booty, viste de christian dior Activa a toas' sus amigas con un call",
-//     username: "La bebecita bebe lean y bebe whisky Fuma marihuana y también se mete picky Senda bellacona, frikitona, friky friky Es media salvaje, ella es adicta a mi dicky",
-//     email: "Le mete al lean y le mete al whisky Fuma marihuana y también se mete picky Senda bellacona, frikitona, friky friky En la cama una salvaje y la castigo con mi dicky",
-//     address: {
-//       street: "Baby toma, dos chollys, en un vaso de lean Dando más vueltas que un patín, en la cama ella tiene el swing Con el pelo sayayin En el lexus dando vueltas con mi queen No la mires, evitate el motín",
-//       suite: "Whisky, toma, toma, va quedar en coma Ojos chiquititos, falta que hable en otro idioma Con sus posiciones parece de goma A mi me encanta cuando llama, para que llegue y me la coma",
-//       city: "Le mete al lean y le mete al whisky Fuma fumarihuana y también se mete picky Senda bellacona, frikitona, friky friky En la cama una salvaje y la castigo con mi dicky",
-//       zipcode: "La bebecita bebe lean y bebe whisky Fuma marihuana y también se mete picky Senda bellacona, frikitona, friky friky Es media salvaje, ella es adicta a mi dicky",
-//       geo: {
-//         lat: "Ella es una bellaca, chingamos en la sala y en la hamaca Recostados de la butaca, encima de todas las pacas 5: 12 para el sistema y media flaca y te meto toda la noche Ponte en 4 mami pero en tacas De giuseppe, yo soy el que le reparte a todos el pety Y me roncan de mujeres y andan con betty spaghetti Me recuerdo aquel día en que yo te metí Apuntamos el blanco, en tu culo te puse una equis",
-//         lng: "La bebecita bebe lean y bebe whisky Fuma marihuana y también se mete picky Senda bellacona, frikitona, friky friky Es media salvaje, ella es adicta a mi dicky"
-//       }
-//     },
-//     phone: "Le mete al lean y le mete al whisky Fuma fumarihuana y también se mete picky Senda bellacona, frikitona, friky frikyEn la cama una salvaje y la castigo con mi dicky",
-//     website: "Yo no me meto palys, porque siempre borro cinta Me ves en la disco, tú te pegas y te afincas Te trincas y brincas, brincoteando tú te desenvuelves Y te envuelves rápido, que la redonda se disuelve en tu sistema",
-//     company: {
-//       name: "El opio baja por lo digestivo pal hígado es el castigo El efecto secundario es efectivo Masivo, yo nunca me fatigo Cabeza grande para tu toto, es algo destructivo",
-//       catchPhrase: "La bebecita bebe lean y bebe whisky Fuma marihuana y también se mete picky Senda bellacona, frikitona, frky friky Es media salvaje, ella es adicta a mi dicky",
-//       bs: "Le mete al lean y le mete al whisky Fuma fumarihuana y también se mete picky Senda bellacona, frikitona, friky friky En la cama una salvaje y la castigo con mi dicky"
-//     },
-//   };
-    // usersDataPosts(newUser).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// const address={
+//     street:"123 Main St",
+//     suite:"Apt 4",
+//     city:"Anytown",
+//     zipcode:"12345",
+//     geo:{
+//         lat:"-37.3159",
+//         lng:"81.1496"
+//     }
+// };
+
+// const phone="1-770-736-8031 x56442";
+// const website="hildegard.org";
+
+// const company={
+//     name:"Romaguera-Crona",
+//     catchPhrase:"Multi-layered client-server neural-net",
+//     bs:"harness real-time e-markets"
+// };
+// usersDataPosts({ name, username, email, address, phone, website, company }).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
 //=================================================================================================================================================================//
 
@@ -872,55 +924,218 @@ import { deleteDataUsers } from "./module/users.js";
 //=================================================================================================================================================================//
 
 // //POSTS
-// const selectDataPost={id:1,userId:2,title:"el valenciaja",body:"que lo que"};
-//     putDataPosts(selectDataPost).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// const id = 1;
+// const userId = 1;
+// const title = "Título del post";
+// const body = "Contenido del post";
+// putDataPosts( id, userId, title, body).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
-// //COMMENTS 
-// const selectDataComment={id:5,postId:1,name:"Como tu te llama io no c 😭",email:"Guayascript12@gmail.com",body:"como que tu diceeeee 😼"};
-// putDataComment(selectDataComment).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// //COMMENTS
+// const id=1;
+// const postId=1;
+// const name='calos';
+// const email='calos3@gmail.com';
+// const body='barasofhalkgjsjkfggkhpdr';
+// putDataComment(id,postId,name,email,body).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
 // //ALBUMS
-// const selectDataAlbums={id:2,userId:1,title:"LA BUENA 😼"};
-// putDataAlbums(selectDataAlbums).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// const id=2;
+// const userId=1;
+// const title="LA BUENA 😼";
+// putDataAlbums(id,userId,title).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
 // //PHOTOS
-// const selectDataPhotos={id:50,albumId:1,title:"COMO ESTAN MUCHACHOS",url:"comotanmuchachos.com",thumbnailUrl:"noc,comotanmuchachosXD"};
-// putDataPhotos(selectDataPhotos).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// const id=50;
+// const albumId=10;
+// const title="LA BUENA";
+// const URL="LA BUENA URL 😼";
+// const thumbnailUrl="LA BUENA THMBAILURL😼";
+// putDataPhotos(id,albumId,title,URL,thumbnailUrl).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
 
 // //TODOS
-// const selectDataTodos={id:1,userId:1,title:"QUIUBO",completed:true};
-// putDataTodos(selectDataTodos).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// const id=1;
+// const userId=1;
+// const title='wasaaaaaaaaaaaaaa';
+// const completed=true;
+// putDataTodos(id,userId,title,completed).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
 
 // //USERS
-// const selectDataUsers={id:2,name:"Lebron James",username:"Libra",email:"libronjames@gamil.com",address:{street:"Kulas Light",suite:"Apt. 465",city:"wiwiwii",zipcode:"98415-65423",geo:{lat:"-65165165",lng:"81.1496"}},phone:"1-2-496687564-498",website:"libraypapa.com",company:{name:"libros James",catchPhrase:"Multi-layered client-server neural-net",bs:"harness real-time e-markets"}};
-// putDataUsers(selectDataUsers).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// const id=1;
+// const name="John a";
+// const username="johndoe";
+// const email="john.doe@example.com";
 
-// //USERS prueba server miguel
-// const selectDataUsers = {
-//     id: "b87f",
-//     name: "Para entender la historia de Five Nights at Freddy's hay que olvidarse que estos son juegos y quiero que tomen realmente a esta saga como lo que es: una historia de terror. Empezamos con William Afton, el hombre detrás de todo. William y Henry Emily abren juntos una pizzería llamada Fredbear's Family Diner. Es aquí donde comienzan los asesinatos, con William como el principal culpable. Con la apertura de Freddy Fazbear's Pizza, los animatrónicos comienzan a tener comportamientos extraños debido a los espíritus de los niños asesinados. Cada juego nos revela más sobre los oscuros secretos de Afton y su obsesión con la inmortalidad. La saga es una compleja mezcla de tragedia, venganza y el oscuro deseo de vivir para siempre",
-//     username: "Lebron James",
-//     email: "libronjames@gmail.com",
-//     address: {
-//       street: "Kulas Light",
-//       suite: "Apt. 465",
-//       city: "wiwiwii",
-//       zipcode: "98415-65423",
-//       geo: {
-//         lat: "-65165165",
-//         lng: "81.1496"
-//       }
-//     },
-//     phone: "1-2-496687564-498",
-//     website: "libraypapa.com",
-//     company: {
-//       name: "libros James",
-//       catchPhrase: "Multi-layered client-server neural-net",
-//       bs: "harness real-time e-markets"
+// const address={
+//     street:"123 Main St",
+//     suite:"Apt 4",
+//     city:"Anytown",
+//     zipcode:"12345",
+//     geo:{
+//         lat:"-37.3159",
+//         lng:"81.1496"
 //     }
-//   };
-//   putDataUsers(selectDataUsers).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+// };
 
+// const phone="1-770-736-8031 x56442";
+// const website="hildegard.org";
+
+// const company={
+//     name:"Romaguera-Crona",
+//     catchPhrase:"Multi-layered client-server neural-net",
+//     bs:"harness real-time e-markets"
+// };
+// putDataUsers({ id, name, username, email, address, phone, website, company }).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//=================================================================================================================================================================//
+
+//FUNCIONES PATCH DATA
+
+//=================================================================================================================================================================//
+
+//POSTS:
+
+    // //userId
+    // const idForChangeUserid=1;
+    // const newUserId=5;
+    // patchUserIdPost(idForChangeUserid,newUserId).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+    // //title
+    // const idForChangeTitle=2;
+    // const newtitle='hola que tal';
+    // patchTitlePost(idForChangeTitle,newtitle).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+    // //Body
+    // const idForChangeBody=2;
+    // const newBody='hola que mas me llamo jose alfonso';
+    // patchTitlePost(idForChangeBody,newBody).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+
+//COMMENTS 
+
+    // //postId    
+    // const idForChangePostId=1;
+    // const newPostId=1;
+    // patchPostIdComment(idForChangePostId,newPostId).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+    
+    // //name
+    // const idForChangeName=1;
+    // const newName='aksjfhaijgb';
+    // patchNameComment(idForChangeName,newName).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+    
+    // //email
+    // const idForChangeemail=1;
+    // const newEmail='alhgsjigzd';
+    // patchEmailComment(idForChangeemail,newEmail).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+    
+    // //body
+    // const idForChangeBody=1;
+    // const newBody='aljhgishdbjlhgdgbmx';
+    // patchBodyComment(idForChangeBody,newBody).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+    
+
+//ALBUMS
+
+    // //userId
+    // const idForChangeUserId=1;
+    // const newUserId=1;
+    // patchUserIdAlbum(idForChangeUserId,newUserId).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+    
+    // //Title
+    // const idForChangeTitle=1;
+    // const newTitle="alkshjgsokhosg";
+    // patchTitleAlbum(idForChangeTitle,newTitle).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+    
+//PHOTOS
+    
+    // //AlbumId
+    // const idForChangealbumId=1;
+    // const newAlbumId=1;
+    // patchAlbumIdPhoto(idForChangealbumId,newAlbumId).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION 
+
+    // //Title
+    // const idForChangeTitle=1;
+    // const newTitle='lasfiaghgk[ak[ofga';
+    // patchTitlePhoto(idForChangeTitle,newTitle).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION 
+
+    // //URL
+    // const idForChangeURL=1;
+    // const newURL='sofhaoga';
+    // patchURLPhoto(idForChangeURL,newURL).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+    // //Thumbnail
+    // const idForChangethumbnailUrl=1;
+    // const newthumbnailUrl="alfakjgag";
+    // patchThumbnailUrlPhoto(idForChangethumbnailUrl,newthumbnailUrl).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+
+//TODOS
+
+    // // //userId
+    // const idForChangeUserId=1;
+    // const newUserId=2;
+    // patchUserIdTodos(idForChangeUserId,newUserId).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+    // // //title
+    // const idForChangeTitle=1;
+    // const newTitle='dasdgfdhfh';
+    // patchTitleTodos(idForChangeTitle,newTitle).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+    // // //completed
+    // const idForChangeCompleted=1;
+    // const newCompleted=true;
+    // patchCompletedTodos(idForChangeCompleted,newCompleted).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+//USERS
+
+    // // //name
+    // const idForChangeName=1;
+    // const newName='asjkhfaighs';
+    // patchNameUsers(idForChangeName,newName).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+    // // //username
+    // const idForChangeUsername=1;
+    // const newUsername='edghjjktffd';
+    // patchNameUsername(idForChangeUsername,newUsername).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+    // // //email
+    // const idForChangeEmail=1;
+    // const newEmail='edghjjktffd';
+    // patchNameEmail(idForChangeEmail,newEmail).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+    
+    // //adress
+    // const idForChangeAddress = 1;
+    // const newAddress = {
+    //     street: "456 New St",
+    //     suite: "Apt 10",
+    //     city: "Newtown",
+    //     zipcode: "67890",
+    //     geo: {
+    //         lat: "-37.0000",
+    //         lng: "81.0000"
+    //     }
+    // };
+    // patchAddressUsers(idForChangeAddress,newAddress).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+
+    // //phone
+    // const idForChangePhone=1;
+    // const newPhone='1365498456164-54654';
+    // patchPhoneUsers(idForChangePhone,newPhone).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+    
+    // //website
+    // const idForChangeWebsite=1;
+    // const newWebsite='www.dskjhfioahfag';
+    // patchWebsiteUsers(idForChangeWebsite,newWebsite).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+    
+    // //company
+    // const idForChangeCompany = 1;
+    // const newCompany = {
+    //     name: "asdagdfhf-fhfjf",
+    //     catchPhrase: "Massssssssssssst",
+    //     bs: "hwasaaaaaaaaaa"
+    // };
+    // patchCompanyUsers(idForChangeCompany,newCompany).then(data=>console.log(data)).catch(error=>console.error('Error:',error)); //APLICAMOS FORMULA DE LA DOCUMENTACION
+        
 //=================================================================================================================================================================//
 
 //FUNCIONES DELETE DATA
@@ -947,6 +1162,7 @@ import { deleteDataUsers } from "./module/users.js";
 // const todosToDelete=5;
 // deleteDataTodos(todosToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
 
-// //USERS
+//USERS
 // const usersToDelete="";
 // deleteDataUsers(usersToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
+
