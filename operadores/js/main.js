@@ -1166,3 +1166,75 @@ import { deleteDataUsers } from "./module/users.js";
 // const usersToDelete="";
 // deleteDataUsers(usersToDelete).then(()=>console.log(`Eliminación completada de ${dataToDelete}`)).catch(error=>console.error('Error:', error));
 
+
+
+
+// =======================================================================================================================================================================================================//
+
+
+
+// AHORA SI VIENE LO BUENO, ENTRAMOS A LA CREACION DE LOS MENUS Y YA EL USO DE LAS FUNCIONES
+
+
+
+// =======================================================================================================================================================================================================//
+
+
+
+(()=>{
+    const MenuPrincipal=()=>{
+        let opcion=Number(prompt(
+            `
+            BIENVENIDO USUARIO :D
+            Estas en el programa de manejo de datos campuslands
+            Que miraremos hoy?
+            1.Posts
+            2.Comments
+            3.Albums
+            4.Photos
+            5.Todos
+            6.Users
+            0.Salir
+            
+            `,"Ingresa la opcion"));
+        
+            if (opcion===1) {
+                const menuPosts=()=>{
+                    let opcion=Number(prompt())
+                }
+            }
+            if (opcion===2) {
+                const menuPosts=()=>{
+                    let opcion=Number(prompt())
+                }            
+            }
+            if (opcion===3) {
+                const menuPosts=()=>{
+                    let opcion=Number(prompt())
+                }            
+            }
+            if (opcion===4) {
+                const menuPosts=()=>{
+                    let opcion=Number(prompt())
+                }            
+            }
+            if (opcion===5) {
+                const menuPosts=()=>{
+                    let opcion=Number(prompt())
+                }            
+            }
+            if (opcion===6) {
+                const menuPosts=()=>{
+                    let opcion=Number(prompt())
+                }            
+            }
+            if (opcion===0) {
+               alert('Cerrando el programa')
+            }
+            else {
+                alert('papi solo se aceptan numeros, nada de espacios en blanco ni letras ☠');
+                MenuPrincipal();
+            }
+    }
+    MenuPrincipal();
+})();
