@@ -4,7 +4,7 @@ import { getOneUser } from "./users.js";
 export const getAllPosts=async ()=>{
     let response=await fetch('https://jsonplaceholder.typicode.com/posts');
     let data=await response.json();
-    return data;
+    return(data);
 };
 
 //GET ONE DATA POSTS
